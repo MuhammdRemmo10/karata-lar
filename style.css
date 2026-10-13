@@ -9,3 +9,23 @@
 
 /* Keep the collection note below the product caption at every screen size. */
 .hero-visual{padding-bottom:0}.floating-note{position:relative;left:auto;bottom:auto;width:max-content;max-width:100%;margin:18px 0 0;transform:none}
+
+/* Keep every header action available on phones and tablets. */
+.list-button .mobile-label{display:none}
+@media(max-width:900px){
+  html{scroll-padding-top:138px}
+  header .nav{display:grid;grid-template-columns:minmax(0,1fr) auto;height:auto;min-height:0;column-gap:16px;row-gap:10px;padding:14px 0 10px}
+  header .brand{grid-column:1;grid-row:1;margin-right:0;justify-self:start}
+  header .brand img{width:clamp(125px,36vw,210px)}
+  header .nav-actions{display:contents}
+  header .download-nav{display:flex;grid-column:2;grid-row:1;justify-self:end;align-items:center;min-height:42px;padding:10px 13px;gap:8px;font-size:11px;white-space:nowrap}
+  header .download-nav svg{width:17px;height:17px}
+  header .nav>nav{display:flex;grid-column:1;grid-row:2;align-items:center;gap:clamp(12px,3vw,22px);min-height:40px;font-size:11px;white-space:nowrap}
+  header .nav>nav a{padding:10px 0}
+  header .list-button{grid-column:2;grid-row:2;justify-self:end;min-height:40px;padding:4px 0;gap:5px;font-size:11px}
+  header .list-button svg{width:17px;height:17px}
+  header .list-button .desktop-label{display:none}
+  header .list-button .mobile-label{display:inline}
+}
+@media(max-width:640px){header .brand img{width:clamp(125px,36vw,175px)}}
+@media(max-width:360px){header .nav{column-gap:10px}header .download-nav{font-size:10px;padding:10px 11px;gap:6px}header .nav>nav{font-size:10px;gap:10px}header .list-button{font-size:10px}}
