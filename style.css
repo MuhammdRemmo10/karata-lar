@@ -6,3 +6,6 @@
 .product-name{font-size:12px}.product-cat{font-size:9px}.product-model{font-size:10px}.product-model strong{font-size:11px}.product-bottom span{font-size:9px}.detail-button{font-size:10px}.cat-button{font-size:12px}.search input{font-size:12px}
 @media(max-width:640px){.product-name{font-size:11px;min-height:56px}.product-cat{font-size:8px}.product-model{font-size:8px}.product-model strong{font-size:9px}.product-bottom span{font-size:8px}.detail-button{font-size:9px}.search input{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Keep the collection note below the product caption at every screen size. */
+.hero-visual{padding-bottom:0}.floating-note{position:relative;left:auto;bottom:auto;width:max-content;max-width:100%;margin:18px 0 0;transform:none}
