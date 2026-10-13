@@ -5,8 +5,8 @@
   <meta name="theme-color" content="#153557">
   <title>KARATAŞLAR — Ürün Kataloğu</title>
   <meta name="description" content="KARATAŞLAR Lüx Hırdavat'ın 344 ürün ve 27 kategoriden oluşan dijital kataloğunu keşfedin. Ürün görselleri, model bilgileri ve paket detayları bir arada.">
-  <link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css?v=20261013-3">
-  <script src="catalog-data.js" defer></script><script src="app.js" defer></script>
+  <link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="style.css?v=20261013-4">
+  <script src="catalog-data.js" defer></script><script src="app.js?v=20261013-4" defer></script>
 </head>
 <body>
   <a href="#catalog" class="skip">Ürünlere geç</a>
@@ -42,7 +42,11 @@
   </main>
   <footer><div class="container footer-main"><div><img src="assets/logo.png" alt="KARATAŞLAR Lüx Hırdavat" width="220" height="45"><p>Hırdavat ve günlük ihtiyaç ürünleri.</p></div><div><a href="#catalog">Ürün koleksiyonu</a><a href="#categories">Kategoriler</a><a href="assets/karataslar-katalog.pdf" download>PDF katalog ↧</a></div><div><span>KATALOG SÜRÜMÜ</span><p>13 Ekim 2026</p><small>Model ve ambalaj bilgileri katalogdan alınmıştır.<br>Güncel ürün bilgileri için mağazamıza başvurun.</small></div></div><div class="container footer-bottom"><span>© 2026 KARATAŞLAR Lüx Hırdavat</span><a href="#">Yukarı dön ↑</a></div></footer>
   <dialog id="productDialog" class="product-dialog" aria-label="Ürün detayları"><button class="close-dialog" data-close aria-label="Kapat">×</button><div id="productDetail"></div></dialog>
-  <dialog id="listDialog" class="list-dialog" aria-labelledby="listTitle"><button class="close-dialog" data-close aria-label="Kapat">×</button><p class="eyebrow">KARATAŞLAR</p><h2 id="listTitle">Seçim listem</h2><p class="list-intro">İncelemek istediğiniz ürünleri bir arada tutun.</p><div id="listItems"></div><div class="list-footer"><button id="exportList" class="button primary">Seçim listesini indir <span>↧</span></button><button id="clearList" class="text-link">Listeyi temizle</button></div></dialog>
+  <dialog id="listDialog" class="list-dialog" aria-labelledby="listTitle">
+    <div class="list-panel-heading"><button class="close-dialog" data-close aria-label="Kapat">×</button><p class="eyebrow">KARATAŞLAR</p><h2 id="listTitle">Seçim listem</h2><p class="list-intro">Ürünleri seçin, listenizi kopyalayın veya WhatsApp'ta paylaşın.</p><p id="selectedSummary" class="selected-summary" aria-live="polite"></p></div>
+    <div class="list-panel-body"><div id="listItems"></div><div id="copyFallback" class="copy-fallback" hidden><label for="selectionText">Paylaşılacak liste</label><textarea id="selectionText" rows="8" readonly></textarea><p>Metni seçip kopyalayabilirsiniz.</p></div></div>
+    <div class="list-footer"><div class="list-share-actions"><button id="copyList" class="button copy-button" aria-label="Listeyi kopyala" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V4H4v11h4"/></svg>Kopyala</button><a id="whatsappShare" class="button whatsapp-button" role="link" aria-label="WhatsApp'ta paylaş" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.3 8L3 21l1.5-4.7A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c0 4.5 3.2 7.5 7.5 8l1-2.5-2.8-1-1 1c-1.7-.8-2.9-2-3.6-3.6l1-1L9 6.5Z"/></svg>WhatsApp</a><button id="clearList" class="button clear-button" disabled>Temizle</button></div><button id="exportList" class="text-link export-list" disabled>Metin dosyası olarak indir <span>↧</span></button><p class="share-hint">WhatsApp'ta alıcıyı seçip mesajı gönderebilirsiniz.</p><p id="listFeedback" class="list-feedback" role="status" hidden></p></div>
+  </dialog>
   <div id="toast" class="toast" role="status"></div>
 </body>
 </html>
