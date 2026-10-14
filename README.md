@@ -1,4 +1,12 @@
-# KARATAŞLAR — Dijital Ürün Kataloğu
+# KARATAŞLAR — Kurumsal Web Sitesi ve Ürün Kataloğu
+
+Şirketin değerlendirmesine sunulmak üzere hazırlanan Türkçe kurumsal site önerisi. Altı sayfa: `index.html`, `kurumsal.html`, `urunler.html`, `markalar.html`, `iletisim.html`, `e-katalog.html`.
+
+Şirket geçmişi, iletişim bilgileri ve marka görselleri karataslarhirdavat.com.tr sitesinin kurumsal, iletişim ve markalar sayfalarından alınmıştır. Ürünler sağlanan 13 Ekim 2026 kataloğuna dayanır. 344 ürün ve 27 kategori, arama, seçim listesi, kopyalama ve alıcı seçimine açık WhatsApp paylaşımı korunur.
+
+Mevcut şirket sitesi ve alan adı değiştirilmemiştir. Şirket onayından sonra yetkili alan adı yöneticisi geçişi yapmalıdır. E-posta kayıtları korunmalı, eski URL yönlendirmeleri ve HTTPS doğrulanmalı, `app.js` içindeki katalog paylaşım adresi ve SEO adresleri onaylanan alan adına güncellenmelidir.
+
+`corporate.css` kurumsal sayfa düzenlerini, `corporate.js` erişilebilir mobil menüyü, `motion.js` azaltılmış hareket tercihine duyarlı animasyonları sağlar. Telefon ve e-posta bağlantıları ilgili uygulamaları açar; sunucuya mesaj gönderildiğini iddia eden bir form yoktur.
 
 KARATAŞLAR Lüx Hırdavat'ın 13 Ekim 2026 tarihli ürün kataloğundan hazırlanmış Türkçe web sitesi.
 

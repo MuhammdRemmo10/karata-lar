@@ -20,8 +20,8 @@
     element.classList.add('reveal');
     reveal.observe(element);
   }
-  document.querySelectorAll('.hero-copy > *, .hero-visual, .section-heading, .contact-section > *, .footer-main > *').forEach((element, index) => prepare(element, index));
-  const grids = document.querySelectorAll('#products, #featuredCategories');
+  document.querySelectorAll('.hero-copy > *, .hero-visual, .section-heading, .contact-section > *, .footer-main > *, .corporate-hero-copy > *, .hero-showcase, .company-about > *, .brand-card, .contact-tiles > *, .address-panel, .company-values > *, .catalog-banner, .pdf-page > *').forEach((element, index) => prepare(element, index));
+  const grids = document.querySelectorAll('#products, #featuredCategories, #homeProducts');
   grids.forEach(grid => {
     Array.from(grid.children).forEach(prepare);
     new MutationObserver(() => Array.from(grid.children).forEach(prepare)).observe(grid, {childList: true});
