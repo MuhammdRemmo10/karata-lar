@@ -174,3 +174,12 @@
  .corporate-site .detail-button{padding:5px 7px;font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){.corporate-site .brand-card,.corporate-site .product-card,.corporate-site .brand-card img{transition:none!important}.corporate-site .brand-card:hover,.corporate-site .product-card:hover{transform:none}}
+
+/* Keep a meaningful image state visible on slow or interrupted connections. */
+.product-image-button,.detail-image{position:relative}
+[data-image-state="loading"]::after{content:"Görsel yükleniyor…";position:absolute;inset:0;display:grid;place-items:center;color:#805122;font-size:12px;letter-spacing:.02em;pointer-events:none}
+[data-image-state="loading"]>img,[data-image-state="error"]>img{opacity:0!important}
+.product-image-button[data-image-state="error"]::after{content:"Görsel yüklenemedi · Detayları aç";position:absolute;inset:20px;display:grid;place-items:center;color:#805122;font-size:12px;pointer-events:none}
+.image-retry{display:none;position:absolute;inset:auto 20px;top:50%;transform:translateY(-50%);padding:16px;border:1px solid #edbe8c;border-radius:10px;background:#fff6eb;color:#71471d;font:inherit;font-size:13px;cursor:pointer}
+[data-image-state="error"]>.image-retry{display:block}
+.image-retry:focus-visible{outline:3px solid #f18a1c;outline-offset:4px}
